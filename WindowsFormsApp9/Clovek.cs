@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 
 namespace WindowsFormsApp9
@@ -19,9 +18,9 @@ namespace WindowsFormsApp9
             this.T_narozen = roky;
         }
 
-        public void Vypis_jmeno()
+        public string Vypis_jmeno()
         {
-            MessageBox.Show("jmeno je " + T_jmeno);
+            return ("jmeno je " + T_jmeno);
         }
 
         TimeSpan Vek()
@@ -50,29 +49,28 @@ namespace WindowsFormsApp9
             TimeSpan roky = ted - T_narozen;
             if (ano_ne == true)
             {
-                MessageBox.Show(T_jmeno + " je stary " + roky.Days/365.25 + " let a je plnolety");
-                return null;
+                return (T_jmeno + " je stary " + roky.Days/365.25 + " let a je plnolety");
             }
             else
             {
-                MessageBox.Show(T_jmeno + " je stary" + roky.Days/365.25 + " let a neni plnolety");
-                return null;
+                return (T_jmeno + " je stary" + roky.Days / 365.25 + " let a neni plnolety");
             }
         }
 
-        public void Starsi(string jmeno2, DateTime roky2)
+        public string Starsi(string jmeno2, DateTime roky2)
         {
+            jmeno2 = "Ahmed";
             if (T_narozen < roky2)
             {
-                MessageBox.Show(T_jmeno + " je starsi");
+                return (T_jmeno + " je starsi");
             }
             else if (T_narozen == roky2)
             {
-                MessageBox.Show("Oba jsou stejne stari");
+                return ("Oba jsou stejne stari");
             }
             else
             {
-                MessageBox.Show(jmeno2 + " je starsi typek");
+                return (jmeno2 + " je starsi typek");
             }
         }
     }

@@ -36,9 +36,12 @@ namespace WindowsFormsApp9
             }
 
             Clovek clovek = new Clovek(name_1, vek_1);
-            clovek.Vypis_jmeno();
-            clovek.ToString();
-            clovek.Starsi(name_2, vek_2);
+            string Y = clovek.Vypis_jmeno();
+            MessageBox.Show(Y);
+            string X = clovek.ToString();
+            MessageBox.Show(X);
+            string K = clovek.Starsi(name_2, vek_2);
+            MessageBox.Show(K);
         }
     }
 }
